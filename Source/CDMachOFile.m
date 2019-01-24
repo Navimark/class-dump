@@ -434,34 +434,36 @@ static NSString *CDMachOFileMagicNumberDescription(uint32_t magic)
 
 - (NSString *)loadCommandString:(BOOL)isVerbose;
 {
-    NSMutableString *resultString = [NSMutableString string];
-    NSUInteger count = [_loadCommands count];
-    for (NSUInteger index = 0; index < count; index++) {
-        [resultString appendFormat:@"Load command %lu\n", index];
-        CDLoadCommand *loadCommand = _loadCommands[index];
-        [loadCommand appendToString:resultString verbose:isVerbose];
-        [resultString appendString:@"\n"];
-    }
+//    NSMutableString *resultString = [NSMutableString string];
+//    NSUInteger count = [_loadCommands count];
+//    for (NSUInteger index = 0; index < count; index++) {
+//        [resultString appendFormat:@"Load command %lu\n", index];
+//        CDLoadCommand *loadCommand = _loadCommands[index];
+//        [loadCommand appendToString:resultString verbose:isVerbose];
+//        [resultString appendString:@"\n"];
+//    }
 
-    return resultString;
+//    return resultString;
+    return @"";
 }
 
 - (NSString *)headerString:(BOOL)isVerbose;
 {
-    NSMutableString *resultString = [NSMutableString string];
-    [resultString appendString:@"Mach header\n"];
-    [resultString appendString:@"      magic cputype cpusubtype   filetype ncmds sizeofcmds      flags\n"];
-    // Grr, %11@ doesn't work.
-    if (isVerbose)
-        [resultString appendFormat:@"%11@ %7@ %10u   %8@ %5lu %10u %@\n",
-                      CDMachOFileMagicNumberDescription([self magic]), [self archName], [self cpusubtype],
-                      [self filetypeDescription], [_loadCommands count], 0, [self flagDescription]];
-    else
-        [resultString appendFormat:@" 0x%08x %7u %10u   %8u %5lu %10u 0x%08x\n",
-                      [self magic], [self cputype], [self cpusubtype], [self filetype], [_loadCommands count], 0, [self flags]];
-    [resultString appendString:@"\n"];
-
-    return resultString;
+//    NSMutableString *resultString = [NSMutableString string];
+//    [resultString appendString:@"Mach header\n"];
+//    [resultString appendString:@"      magic cputype cpusubtype   filetype ncmds sizeofcmds      flags\n"];
+//    // Grr, %11@ doesn't work.
+//    if (isVerbose)
+//        [resultString appendFormat:@"%11@ %7@ %10u   %8@ %5lu %10u %@\n",
+//                      CDMachOFileMagicNumberDescription([self magic]), [self archName], [self cpusubtype],
+//                      [self filetypeDescription], [_loadCommands count], 0, [self flagDescription]];
+//    else
+//        [resultString appendFormat:@" 0x%08x %7u %10u   %8u %5lu %10u 0x%08x\n",
+//                      [self magic], [self cputype], [self cpusubtype], [self filetype], [_loadCommands count], 0, [self flags]];
+//    [resultString appendString:@"\n"];
+//
+//    return resultString;
+    return @"";
 }
 
 - (NSUUID *)UUID;

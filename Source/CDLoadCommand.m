@@ -201,11 +201,11 @@
 
 - (void)appendToString:(NSMutableString *)resultString verbose:(BOOL)isVerbose;
 {
-    [resultString appendFormat:@"     cmd %@", [self commandName]];
-    if (self.mustUnderstandToExecute)
-        [resultString appendFormat:@" (must understand to execute)"];
-    [resultString appendFormat:@"\n"];
-    [resultString appendFormat:@" cmdsize %u\n", [self cmdsize]];
+//    [resultString appendFormat:@"     cmd %@", [self commandName]];
+//    if (self.mustUnderstandToExecute)
+//        [resultString appendFormat:@" (must understand to execute)"];
+//    [resultString appendFormat:@"\n"];
+//    [resultString appendFormat:@" cmdsize %u\n", [self cmdsize]];
 }
 
 - (void)machOFileDidReadLoadCommands:(CDMachOFile *)machOFile;

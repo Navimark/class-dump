@@ -58,8 +58,8 @@
 {
     [super appendToString:resultString verbose:isVerbose];
 
-    [resultString appendFormat:@"    Minimum version: %@\n", self.minimumVersionString];
-    [resultString appendFormat:@"    SDK version: %@\n", self.SDKVersionString];
+//    [resultString appendFormat:@"    Minimum version: %@\n", self.minimumVersionString];
+//    [resultString appendFormat:@"    SDK version: %@\n", self.SDKVersionString];
 }
 
 @end

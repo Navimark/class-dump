@@ -51,7 +51,7 @@
 {
     [super appendToString:resultString verbose:isVerbose];
 
-    [resultString appendFormat:@"    Source version: %@\n", self.sourceVersionString];
+//    [resultString appendFormat:@"    Source version: %@\n", self.sourceVersionString];
 }
 
 @end

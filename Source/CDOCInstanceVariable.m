@@ -74,15 +74,15 @@
 {
     CDType *type = [self type]; // Parses it, if necessary;
     if (self.parseError != nil) {
-        [resultString appendFormat:@"    // Error parsing type: %@, name: %@", self.typeString, self.name];
+//        [resultString appendFormat:@"    // Error parsing type: %@, name: %@", self.typeString, self.name];
     } else {
-        NSString *formattedString = [[typeController ivarTypeFormatter] formatVariable:self.name type:type];
-        NSParameterAssert(formattedString != nil);
-        [resultString appendString:formattedString];
-        [resultString appendString:@";"];
-        if ([typeController shouldShowIvarOffsets]) {
-            [resultString appendFormat:@"\t// %ld = 0x%lx", self.offset, self.offset];
-        }
+//        NSString *formattedString = [[typeController ivarTypeFormatter] formatVariable:self.name type:type];
+//        NSParameterAssert(formattedString != nil);
+//        [resultString appendString:formattedString];
+//        [resultString appendString:@";"];
+//        if ([typeController shouldShowIvarOffsets]) {
+//            [resultString appendFormat:@"\t// %ld = 0x%lx", self.offset, self.offset];
+//        }
     }
 }
 
